@@ -7,6 +7,7 @@ module.exports = {
     entry: [
         //这将连接到服务器以接收通知，当bundle被重新build出来时,然后更新相应的client包
         'webpack-hot-middleware/client',
+        //react的HMR开启
         'react-hot-loader/patch',
         './src/index.js'
     ],

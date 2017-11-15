@@ -7,21 +7,18 @@ const webpackHotMiddleware = require("webpack-hot-middleware")
 
 const app = express();
 
+const port = 3000;
 
-// Tell express to use the webpack-dev-middleware and use the webpack.config.js
-// configuration file as a base.
-app.use(webpackDevMiddleware(compiler, {
-    publicPath: webpackConfig.output.publicPath
-}));
+
 
 //将webpack中间件添加到server
-// app.use(webpackDevMiddleware(compiler, {
-//     noInfo: true, publicPath: webpackConfig.output.publicPath
-// }));
+app.use(webpackDevMiddleware(compiler, {
+    noInfo: true, publicPath: webpackConfig.output.publicPath
+}));
 // //添加HMR到server
-// app.use(webpackHotMiddleware(compiler));
+app.use(webpackHotMiddleware(compiler));
 
 // Serve the files on port 3000.
-app.listen(3000, function () {
+app.listen(port, function () {
     console.log('Example app listening on port 3000!\n');
 });
