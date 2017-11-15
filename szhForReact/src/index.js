@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import './style.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -19,4 +18,8 @@ if (module.hot) {
     module.hot.accept('./components/App', () => { render(App) })
 }
 
+render(App);
 
+if(module.hot) {
+    module.hot.accept('./components/App', () => { render(App) })
+}

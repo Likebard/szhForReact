@@ -15,7 +15,7 @@ const port = 3000;
 app.use(webpackDevMiddleware(compiler, {
     noInfo: true, publicPath: webpackConfig.output.publicPath
 }));
-// //添加HMR到server
+//添加HMR到server
 app.use(webpackHotMiddleware(compiler));
 
 // Serve the files on port 3000.
