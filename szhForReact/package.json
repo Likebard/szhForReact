@@ -4,8 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "webpack",
-    "server": "node server.js"
+    "build": "webpack --config webpack.prod.js",
+    "server": "node server.js",
+    "start": "node server.js --open --config webpack.dev.js"
   },
   "devDependencies": {
     "babel": "^6.23.0",
